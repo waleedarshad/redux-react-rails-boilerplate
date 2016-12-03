@@ -5,13 +5,6 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'rack-cors'
 
-# file upload/storage 
-# gem "fog-aws"
-# gem 'carrierwave-aws'
-# gem 'rmagick'
-# gem "mini_magick"
-
-
 #auth
 gem 'knock', '~> 1.5'
 gem 'bcrypt', '~> 3.1.7'
