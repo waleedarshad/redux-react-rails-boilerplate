@@ -38,7 +38,7 @@ class LoginForm extends Component {
               id='usernameInput'
               defaultValue='qq@qq.com'
               onChange={this.handleValueChange}
-              label='Email'
+              label=''
             />
             <label className='mdl-textfield__label' htmlFor='usernameInput'>Email</label>
           </div>
@@ -49,7 +49,7 @@ class LoginForm extends Component {
               id='passwordInput'
               defaultValue='12345678'
               onChange={this.handleValueChange}
-              label='Password'
+              label=''
             />
             <label className='mdl-textfield__label' htmlFor='passwordInput'>Password</label>
           </div>

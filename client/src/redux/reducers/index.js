@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux'
 import { token } from './auth'
 import { appData } from './appData'
-import { favorites } from './favorites'
 
-const MIGHSchedulerApp = combineReducers({
+const ReduxReactRailsApp = combineReducers({
   token,
-  appData,
-  favorites
+  appData
 })
 
-export default MIGHSchedulerApp
+export default ReduxReactRailsApp

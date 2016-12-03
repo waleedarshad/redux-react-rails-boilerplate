@@ -1,17 +1,10 @@
 import React, { Component } from 'react'
 
 import './dashboard.css'
-// import './react-treeview.css'
 import logo from './logo.svg'
 
 import VisibleLoginForm from '../../redux/containers/login'
-
-import FavoriteCard from '../favorites/favorite-card'
-
-import SearchForm from '../search/search-form'
-import FavoriteForm from '../addfav/addfav-form'
-
-import VisibleReduxTree from '../../redux/containers/redux-tree'
+import Button from 'react-mdl/lib/Button'
 
 class Dashboard extends Component {
 
@@ -24,35 +17,14 @@ class Dashboard extends Component {
     this.props._authActions.logout()
   }
 
-  handleSearch () {
-    this.props._favActions.getFavorites(
-      this.props.appData.search.searchInput
-    )
-  }
-
-  renderFavorites (favorites) {
-    if (favorites.length > 0) {
-      return favorites.map((favorite, index) => (
-        <FavoriteCard favorite={favorite} index={index} />
-      ))
-    } else {
-      return []
-    }
-  }
-
   render () {
     return (
       <div className='container'>
         <div className='App App-header'>
           <div className='row'>
-            <div className='col-md-7'>
+            <div className='col-md-12'>
               <div className='row'>
-                <div className='mdl-tooltip' data-mdl-for='tt2'>
-                  Everything you see is inside a container named Dashboard.
-                  It knows about Redux and has props and actions
-                  connected to it! You can find it in /redux/containers/dashboard.js.
-                </div>
-                <div id='tt2'>
+                <div>
                   <div className='App-logo'>
                     <img src={logo} className='App-logo' alt='logo' />
                   </div>
@@ -63,31 +35,14 @@ class Dashboard extends Component {
               <div className='row'>
                 {this.props.token
                   ? <div>
-                    <button onClick={this.handleLogout.bind(this)} className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>Logout</button>
-                    <FavoriteForm />
+                    <Button onClick={this.props._authActions.logout} className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent loginbtn'>
+                      Logout
+                    </Button>
+                    You are logged in!
                   </div>
                   : <VisibleLoginForm />
                 }
               </div>
-              <br />
-              <div className='row'>
-                <SearchForm
-                  valueChangeCB={this.handleValueChange.bind(this)}
-                  searchCB={this.handleSearch.bind(this)} />
-              </div>
-              {this.props.favorites.length > 0
-                ? <div className='row'>
-                  <div className='results'>
-                    <ul className='demo-list-control mdl-list'>
-                      { this.renderFavorites(this.props.favorites) }
-                    </ul>
-                  </div>
-                </div>
-                : <div className='searchErr'><strong>No search results found, try again...</strong></div>
-              }
-            </div>
-            <div className='col-md-4'>
-              <VisibleReduxTree />
             </div>
           </div>
         </div>

@@ -8,9 +8,9 @@ import Notifications from 'react-notify-toast'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import ReduxReactRails from './redux/reducers'
+import ReduxReactRailsApp from './redux/reducers'
 
-const store = createStore(ReduxReactRails,applyMiddleware(thunk))
+const store = createStore(ReduxReactRailsApp, applyMiddleware(thunk))
 
 class App extends Component {
 
