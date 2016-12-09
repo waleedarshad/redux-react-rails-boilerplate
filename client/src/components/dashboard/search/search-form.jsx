@@ -40,7 +40,7 @@ class SearchForm extends Component {
     return (
       <div className='searchform' id='tt3'>
         <strong>Search Favorite Things</strong>
-        <Tooltip position='left' label='I am a regular component named SearchForm. Dashboardis my owner and I receive props provided by Redux through it. I cannot dispatch actions but I can tell the Dashboard to! Find me in /components/search/search-form.jsx'>
+        <Tooltip position='right' label='I am a regular component named SearchForm. Dashboardis my owner and I receive props provided by Redux through it. I cannot dispatch actions but I can tell the Dashboard to! Find me in /components/search/search-form.jsx'>
           <form>
             <div className='label mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
               <Textfield

@@ -10,7 +10,7 @@ class Header extends Component {
         <div className='row'>
           <div className='col-md-7'>
             <div className='row'>
-              <Tooltip position='left' label='Everything you see is inside a container named Dashboard. It knows about Redux and has props and actions connected to it! You can find it in /redux/containers/dashboard.js.'>
+              <Tooltip position='right' label='Everything you see is inside a container named Dashboard. It knows about Redux and has props and actions connected to it! You can find it in /redux/containers/dashboard.js.'>
                 <div id='tt2'>
                   <div className='App-logo'>
                     <img src={logo} className='App-logo' alt='logo' />

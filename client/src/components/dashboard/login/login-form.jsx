@@ -42,7 +42,7 @@ class LoginForm extends Component {
     return (
       <div className='loginbox' id='tt1'>
         <strong>Login to add favs.</strong>
-        <Tooltip position='left' label='I am a login container. Therefore, I know about Redux and have props and actions connected to it! You can find me in redux/containers/login.js.'>
+        <Tooltip position='right' label='I am a login container. Therefore, I know about Redux and have props and actions connected to it! You can find me in redux/containers/login.js.'>
           <form>
             <div className='mdl-textfield mdl-js-textfield mdl-textfield--floating-label field'>
               <Textfield
